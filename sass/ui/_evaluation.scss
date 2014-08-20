@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    EVALUATION
+\*------------------------------------*/
+/**
+* Styling for the evaluation screens
+*/
+
+
+.question--age,
+.question--sex{
+	display: inline-block;
+	width: 50%;
+	margin-bottom: 12px;
+}
+.question--age{
+	padding-right: 12px;
+}
+
+.question--df,
+.question--operation,
+.question--indigenous{
+	position: relative;
+	margin: 12px 0;
+	min-height: 48px;
+	padding-right: 90px;
+	label{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.input--switch{
+		position: absolute;
+		right: 0;
+		top: 6px;
+	}
+}
+

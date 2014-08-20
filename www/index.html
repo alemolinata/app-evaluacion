@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Fondeso - Evaluacion</title>
+	<link rel="shortcut icon" href="favicon.ico"/>
+    <link href='http://fonts.googleapis.com/css?family=Muli:400,300italic|Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="images/header-logo.png" />
+    </div>
+    <div class="page">
+        <div class="page__title">
+            <span class="title__number">1B</span><span class="title__text">Caracter&iacute;sticas Sociodemo...</span>
+        </div>
+        <div class="page__content">
+            <p>Contesta las siguientes preguntas sobre ti y selecciona la respuesta con la que m&aacute;s te identificas.</p>
+            <div class="question--age">
+                <label for="input--age">Edad:</label><br />
+                <input type="text"/>
+            </div><!--
+         --><div class="question--sex">
+                <label for="radio--sex">Sexo:</label><br />
+                <div class="button--radio">
+                    <input type="radio" id="radio--sex__hombre" name="radio--sex" value="h"/>
+                    <label for="radio--sex__hombre">Hombre</label>
+                </div><!--
+             --><div class="button--radio">
+                    <input type="radio" id="radio--sex__mujer" name="radio--sex" value="m"/>
+                    <label for="radio--sex__mujer">Mujer</label>
+                </div>
+            </div>
+            <label for="input--studies">Nivel de Estudios:</label>
+            <div class="input--select">
+                <select class="" id="input--studies">
+                    <option value="0" selected="selected">Ninguno</option>
+                    <option value="1">Primaria</option>
+                    <option value="2">Secundaria / Secundaria T&eacute;cnica</option>
+                    <option value="3">Bachillerato / Preparatoria / Preparatoria T&eacute;cnica</option>
+                    <option value="4">Licenciatura / Ingenier&iacute;a</option>
+                    <option value="5">Maestr&iacute;a &oacute; superior</option>
+                </select>
+            </div>
+            <div class="question--df">
+                <label for="input--df">¿Vives en el DF?</label>
+                <input class="input--switch" type="checkbox" name="checkbox--df"/>
+                <div class="input--switch" id="input--df"><span>S&Iacute;</span><span>NO</span></div>
+            </div>
+            <div class="question--operation">
+                <label for="input--operation">¿El negocio ya est&aacute; en operaci&oacute;n?</label>
+                <input class="input--switch" type="checkbox" name="checkbox--df"/>
+                <div class="input--switch  active" id="input--operation"><span>S&Iacute;</span><span>NO</span></div>
+            </div>
+            <div class="question--indigenous">
+                <label for="input--indigenous">¿Hablas alg&uacute;n dialecto ind&iacute;gena?</label>
+                <input class="input--switch" type="checkbox" name="checkbox--df"/>
+                <div class="input--switch  inactive" id="input--indigenous"><span>S&Iacute;</span><span>NO</span></div>
+            </div>
+            <div class="button__wrapper">
+                <button class="button--back"></button><!--
+             --><button class="button--forward">Siguiente Pregunta</button>
+            </div>
+        </div>
+    </div>
+    <ul class="page__progress  progress-5">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+    <div class="footer">
+        <img src="images/logos-sedeco-cdmx.png" />
+        <img src="images/logo-fondeso.png" />
+        <img src="images/logo-usaid.png" />
+        <img src="images/logo-cdmx.png" />
+        <img src="images/logo-codeando.png" />
+
+    </div>
+</body>
+</html>
+

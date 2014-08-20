@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+/**
+* Main styling!
+*/
+
+.header{
+	max-width: 400px;
+	margin: 0 auto;
+	padding-top: 20px;
+	img{
+		width: 240px;
+	}
+}
+
+.page{
+	background-color: $color__module__bg;
+	max-width: 400px;
+	margin: 0 auto;
+	.page__title{
+		background-color: $color__branding;
+		color: $color__font--light;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		padding: 20px 40px;
+		.title__number{
+			display: inline-block;
+			font-size: 24px;
+			margin-right: 12px;
+			vertical-align: middle;
+		}
+		.title__text{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.page__content{
+		padding: 20px 40px 40px 40px;
+	}
+}
+
+
+.footer{
+	text-align: center;
+	background-color: $color__module__bg;
+	img{
+		max-width: 300px;
+		@include animation(0.5s);
+	}
+}
+@media only screen and (max-width: 620px) {
+	.footer img{
+		max-width: 160px;
+	}
+}
+
+
+

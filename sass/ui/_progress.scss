@@ -1,0 +1,165 @@
+/*------------------------------------*\
+    PROGRESS
+\*------------------------------------*/
+/**
+* Styling for the "progress bar" (more like dots) that goes at the bottom of each page.
+*/
+
+
+
+%progress-icon{
+	&:before{
+		font-size: 22px;
+		content: $icon-circle;
+	}
+	&:after{
+		@extend %icon;
+		content: $icon-triangle;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: -1px;
+		right: 25%;
+	}
+}
+
+ul.page__progress{
+	max-width: 400px;
+	margin: 0 auto;
+	color: $color__module__bg;
+	li{
+		display: inline-block;
+		width: 10%;
+		text-align: center;
+		line-height: 80px;
+		vertical-align: middle;
+		position: relative;
+		&:before{
+			@extend %icon;
+			content: $icon-circle-o;
+		}
+	}
+	&.progress-1{
+		li:first-child{
+			@extend %progress-icon;
+		}
+	}
+	&.progress-2{
+		li:first-child:before,
+		li:nth-child(2):before{
+			content: $icon-circle;
+		}
+		li:nth-child(2){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-3{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before{
+			content: $icon-circle;
+		}
+		li:nth-child(3){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-4{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before{
+			content: $icon-circle;
+		}
+		li:nth-child(4){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-5{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before,
+		li:nth-child(5):before{
+			content: $icon-circle;
+		}
+		li:nth-child(5){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-6{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before,
+		li:nth-child(5):before,
+		li:nth-child(6):before{
+			content: $icon-circle;
+		}
+		li:nth-child(6){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-7{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before,
+		li:nth-child(5):before,
+		li:nth-child(6):before,
+		li:nth-child(7):before{
+			content: $icon-circle;
+		}
+		li:nth-child(7){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-8{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before,
+		li:nth-child(5):before,
+		li:nth-child(6):before,
+		li:nth-child(7):before,
+		li:nth-child(8):before{
+			content: $icon-circle;
+		}
+		li:nth-child(8){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-9{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before,
+		li:nth-child(5):before,
+		li:nth-child(6):before,
+		li:nth-child(7):before,
+		li:nth-child(8):before,
+		li:nth-child(9):before{
+			content: $icon-circle;
+		}
+		li:nth-child(9){
+			@extend %progress-icon;
+		}
+	}
+	&.progress-10{
+		li:first-child:before,
+		li:nth-child(2):before,
+		li:nth-child(3):before,
+		li:nth-child(4):before,
+		li:nth-child(5):before,
+		li:nth-child(6):before,
+		li:nth-child(7):before,
+		li:nth-child(8):before,
+		li:nth-child(9):before,
+		li:nth-child(10):before{
+			content: $icon-circle;
+		}
+		li:nth-child(10){
+			@extend %progress-icon;
+		}
+	}
+
+}
