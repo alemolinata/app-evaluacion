@@ -5,6 +5,7 @@
  * Here we customize inputs.
  */
 
+// GENERAL INPUTS -----------------------------------------------------------------------------
 input[type=text],
 input[type=tel],
 input[type=number],
@@ -24,6 +25,10 @@ input[type=password]{  //costumize all "texty" inputs
 label, .label{
 	display: inline-block;
 }
+
+// SWITCH INPUT -----------------------------------------------------------------------------
+// A checkbox input, that looks like a switch.
+// Always add, right after the checkbox input, a div with class "input--switch" with 2 spans (first one says YES, second NO)
 input.input--switch{
 	width: 80px;
 	height: 36px;
@@ -70,7 +75,6 @@ div.input--switch{
 		@include animation(0.5s);
 	}
 }
-
 input[type="checkbox"]:checked + .input--switch{
 	span{
 		&:first-child{
@@ -90,6 +94,9 @@ input[type="checkbox"]:hover + .input--switch{
 		background-color: darken($color__branding, 10);
 	}*/
 }
+
+// SELECT INPUT -----------------------------------------------------------------------------
+// To style a select input, always wrap it around a div with "input--select" class
 .input--select{
 	position: relative;
 	background-color: $color__gray--light;
@@ -117,6 +124,8 @@ select{
 	}
 }
 
+// BUTTON-LIKE RADIO -----------------------------------------------------------------------------
+// A radio input that looks like a button.
 .button--radio{
 	display:inline-block;
 	width: 50%;
@@ -127,7 +136,7 @@ select{
 	input[type="radio"]{
 		@include opacity(0);
 		width: 70px;
-		margin-right: -74px;
+		margin-right: -75px;
 	}
 	label{
 		padding: 12px 0;
@@ -156,6 +165,9 @@ select{
 
 }
 
+
+// BUTTONS -----------------------------------------------------------------------------
+// The most used are tha back and forward buttons, durind the evaluation.
 button{
 	color: $color__font--light;
 	background-color: $color__branding;
@@ -171,12 +183,19 @@ button{
     &:hover{
     	background-color: darken($color__branding, 10);
     }
+    // Buttons have an inactive state, this is applied when you haven't answered the question yet, therefore you can't go on to the next one.
+    &:disabled,
+    &.inactive{
+		background-color: lighten($color__branding, 25);
+		cursor: default;
+	}
 }
 .button__wrapper{
 	width: 100%;
 	position: relative;
 	padding-left: 60px;
 }
+// The back button is smaller than the forward button. It is always 50 px wide.
 .button--back{
 	width: 50px;
 	position: absolute;
@@ -192,6 +211,7 @@ button{
 		top: 4px;
 	}
 }
+// The forward button, on the other hand, changed width, its width varies depending on the size of the screen.
 .button--forward{
 	width: 100%;
 	text-transform: uppercase;
@@ -207,6 +227,7 @@ button{
 		right: 0;
 		@include animation(0.2s);
 	}
+	// When button is hovered, the arrow moves slightly to the right
 	&:hover{
 		&:after{
 			right: -4px;

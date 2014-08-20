@@ -24,7 +24,7 @@
  * following variables to `true`.
  */
 $use-grids:         false;
-$use-flexbox:       false;
+$use-flexbox:       true;
 $use-columns:       false;
 $use-nav:           false;
 $use-options:       false;
@@ -72,6 +72,9 @@ $desk-wide-start:   1200px!default;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+
+
+$progress-dots: 6!default;
 
 
 $color__gray--light: #EDEDEF;

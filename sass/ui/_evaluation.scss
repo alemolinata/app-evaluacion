@@ -5,20 +5,30 @@
 * Styling for the evaluation screens
 */
 
+// Every evaulation page has a <p> tag asking you the question,
+// Then (most of them) there instructions are given to tell the user what needs to be done.
+.p--instructions{
+	font-size: 0.9em;
+	line-height: 1.2em;
+	color: $color__gray--medium;
+}
+p + .question--priorities{
+	margin-top: 0;
+}
 
-.question--age,
-.question--sex{
+// Questions that don't need to be full width.
+.question--small{
 	display: inline-block;
-	width: 50%;
+	width: 55%;
 	margin-bottom: 12px;
-}
-.question--age{
-	padding-right: 12px;
+	&.smaller{
+		width: 45%;
+		padding-right: 12px;
+	}
 }
 
-.question--df,
-.question--operation,
-.question--indigenous{
+// Questions with a checkbox that looks like a switch
+.question--switch{
 	position: relative;
 	margin: 12px 0;
 	min-height: 48px;
@@ -33,4 +43,58 @@
 		top: 6px;
 	}
 }
+
+// Options that look like buttons.
+.question--button{
+	position: relative;
+	background-color: lighten($color__module__bg-2,2);
+	vertical-align: middle;
+	padding: 12px;
+	margin: 0 -12px 0 -12px ;
+}
+
+.question--priorities{
+	@extend .question--button;
+	@include display-flex();
+	@include align-content(center);
+	margin-top: 12px;
+	input[type="number"]{
+		width: 50px;
+		height: 50px;
+		background-color: darken($color__module__bg-2,5);
+		@include align-self(center);
+		margin-right: 12px;
+		@include vendor(border-radius, 10px);
+	}
+	p{
+		@include flex();
+		margin: 0;
+	}
+}
+
+.question--option{
+	margin-bottom: 12px;
+	position: relative;
+	input[type="radio"]{
+		//@include opacity(0);
+		position: absolute;
+	}
+	label{
+		display: block;
+		@extend .question--button;
+		@include animation(0.2s);
+		&:hover{
+			background-color: darken($color__module__bg-2,5);
+		}
+	}
+	input[type="radio"]:checked + label{
+		background-color: $color__branding;
+	}
+}
+
+.question--priorities + .button__wrapper,
+.question--option + .button__wrapper{
+	margin-top: 20px;
+}
+
 
