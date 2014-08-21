@@ -97,6 +97,16 @@ input[type="checkbox"]:hover + .input--switch{
 
 // SELECT INPUT -----------------------------------------------------------------------------
 // To style a select input, always wrap it around a div with "input--select" class
+/*
+	<label></label>
+    <div.input--select>
+        <select>
+            <option value="0">/option>
+            <option value="1"></option>
+            <option value="2"></option>
+        </select>
+    </div>
+*/
 .input--select{
 	position: relative;
 	background-color: $color__gray--light;
@@ -126,6 +136,16 @@ select{
 
 // BUTTON-LIKE RADIO -----------------------------------------------------------------------------
 // A radio input that looks like a button.
+/*
+	<div.button--radio>
+        <input-radio name="radio--###" id="radio-0" value="0"/>
+        <label for="radio-0"></label>
+    </div><!--
+ --><div class="button--radio">
+        <input-radio name="radio--###" id="radio-1" value="1"/>
+        <label for="radio-1"></label>
+    </div>
+*/
 .button--radio{
 	display:inline-block;
 	width: 50%;
@@ -190,6 +210,13 @@ button{
 		cursor: default;
 	}
 }
+
+/*
+	<div.button__wrapper>
+        <button.button--back></button><!--
+     --><button.button--forward>Siguiente</button>
+    </div>
+*/
 .button__wrapper{
 	width: 100%;
 	position: relative;

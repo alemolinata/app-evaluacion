@@ -223,7 +223,4 @@ ul.page__progress{
 			@extend %progress-icon;
 		}
 	}
-	& + .footer{
-		margin-top: 0;
-	}
 }

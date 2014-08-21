@@ -13,12 +13,25 @@
 	.page{
 		.page__title{
 			padding: 10px 20px;
+			.title__number{
+				top: 12%;
+			}
 		}
 		.page__content{
 			padding: 20px 20px 40px 20px;
 		}
+		.list-item{
+			padding: 10px 20px;
+			&:after{
+				top: 30px;
+			}
+			&.selected{
+				.list-item__content{
+					margin-top: 10px;
+				}
+			}
+		}
 	}
-
 
 	.footer{
 

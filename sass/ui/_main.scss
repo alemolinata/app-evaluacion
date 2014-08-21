@@ -3,6 +3,16 @@
 \*------------------------------------*/
 /**
 * Main styling!
+	<div.header>
+		<img />
+	</div>
+	<div.page>
+		<div.page__title></div>
+		<div.page__content></div> (there may be more) than one, like in the login screen.
+	</div>
+	<ul.page__progress></ul> (This one only goes in the evaluation screens!)
+	<div.footer></div>
+
 */
 
 // At the top of the page, with the logo
@@ -28,15 +38,22 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
 		padding: 20px 40px;
+		position: relative;
 		.title__number{
 			display: inline-block;
 			font-size: 24px;
 			margin-right: 12px;
 			vertical-align: middle;
+			position: absolute;
+			top: 22%;
 		}
 		.title__text{
 			display: inline-block;
 			vertical-align: middle;
+			font-size: 18px;
+		}
+		.title__number + .title__text{
+			padding-left: 48px;
 		}
 	}
 	.page__content{
@@ -59,12 +76,15 @@
 			padding: 0;
 
 		}
+		&:last-child{
+			margin-bottom: 120px;
+		}
 	}
 }
 
 // At the bottom of page, basically only to place logos.
 .footer{
-	margin-top: 120px;
+	padding-top: 20px;
 	text-align: center;
 	background-color: $color__module__bg;
 	img{
@@ -75,64 +95,6 @@
 @media only screen and (max-width: 620px) {
 	.footer img{
 		max-width: 160px;
-	}
-}
-
-.list-item{
-	background-color: $color__module__bg;
-	padding: 20px 40px;
-	position: relative;
-	@include animation-attr(background-color, 0.3s);
-	&:nth-child(2n){
-		background-color: $color__module__bg-2;
-	}
-	.list-item__title{
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		span{
-			display: block;
-			&:nth-child(2){
-				color: $color__branding;
-			}
-		}
-	}
-	.list-item__content{
-		//display: none;
-		max-height: 0;
-		background-color: $color__module__bg;
-		margin: 0 -12px;
-		padding: 0 12px;;
-		font-size: 0.9em;
-		overflow-y: hidden;
-		@include animation(0.6s);
-	}
-	&:after{
-		@extend %icon;
-		@include animation-vendor(transform, 0.5s);
-		content: $icon-chevron-down;
-		position: absolute;
-		right: 30px;
-		top: 40px;
-		color: lighten($color__gray--medium, 20);
-	}
-	
-	&.selected{
-		background-color: $color__gray--medium;
-		.list-item__title{
-			span:first-child{
-				color: $color__module__bg;
-			}
-		}
-		.list-item__content{
-			margin-top: 20px;
-			height: auto;
-			max-height: 800px;
-			padding: 12px;
-		}
-		&:after{
-			color: lighten($color__gray--medium, 40);
-			@include vendor(transform, rotate(180deg));
-		}
 	}
 }
 

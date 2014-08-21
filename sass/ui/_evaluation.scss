@@ -17,6 +17,14 @@ p + .question--priorities{
 }
 
 // Questions that don't need to be full width.
+/*
+	<div .question--small.smaller>
+    </div><!--
+ --><div.question--small>
+    </div>
+
+* If there is an enter between the buttons, it should be commented!    
+*/
 .question--small{
 	display: inline-block;
 	width: 55%;
@@ -28,6 +36,14 @@ p + .question--priorities{
 }
 
 // Questions with a checkbox that looks like a switch
+/*
+* The rest of the styling is in the _forms SCSS.
+	<div.question--switch>
+        <label></label>
+        <input-checkbox.input--switch/>
+        <div.input--switch><span>S&Iacute;</span><span>NO</span></div>
+    </div>
+*/
 .question--switch{
 	position: relative;
 	margin: 12px 0;
@@ -53,6 +69,12 @@ p + .question--priorities{
 	margin: 0 -12px 0 -12px ;
 }
 
+/*
+	<div.question--priorities>
+    	<input number />
+    	<label></label>
+    </div>
+*/
 .question--priorities{
 	@extend .question--button;
 	@include display-flex();
@@ -66,12 +88,19 @@ p + .question--priorities{
 		margin-right: 12px;
 		@include vendor(border-radius, 10px);
 	}
-	p{
+	label{
+		@include align-self(center);
 		@include flex();
-		margin: 0;
 	}
 }
 
+
+/*
+	<div.question--option>
+        <input radio/>
+        <label></label>
+    </div>
+*/
 .question--option{
 	margin-bottom: 12px;
 	position: relative;
@@ -95,10 +124,4 @@ p + .question--priorities{
 .question--priorities + .button__wrapper,
 .question--option + .button__wrapper{
 	margin-top: 20px;
-}
-
-
-
-.page__content.results__list{
-	padding: 0;
 }
