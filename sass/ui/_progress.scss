@@ -30,7 +30,6 @@
 	}
 }
 
-
 // page progress is a list(ul)
 // Every item (li) in the list is one dot. Its before element contains the circle icon
 // The list ALSO has its before element, this is the little triangle that moves and also displays progress.
@@ -45,7 +44,7 @@ ul.page__progress{
 		width: 20px;
 		height: 20px;
 		position: absolute;
-		top: -1px;
+		top: -2px;
 		left: 100% / $progress-dots - 100% / (2 * $progress-dots) - 2%;
 		@include animation(0.5s);
 	}
