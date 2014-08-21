@@ -15,6 +15,20 @@
     -o-transition: all $animation-time ease;
     transition: all $animation-time ease;
 }
+@mixin animation-attr($attribute, $animation-time){
+    -webkit-transition: $attribute $animation-time ease;
+    -moz-transition: $attribute $animation-time ease;
+    -ms-transition: $attribute $animation-time ease;
+    -o-transition: $attribute $animation-time ease;
+    transition: $attribute $animation-time ease;
+}
+@mixin animation-vendor($attribute, $animation-time){
+    -webkit-transition: -webkit-#{$attribute} $animation-time ease;
+    -moz-transition: -moz-#{$attribute} $animation-time ease;
+    -ms-transition: -ms-#{$attribute} $animation-time ease;
+    -o-transition: -o-#{$attribute} $animation-time ease;
+    transition: $attribute $animation-time ease;
+}
 
 %title{ //title silent class, won't appear unless extended. Yours to define. 
 

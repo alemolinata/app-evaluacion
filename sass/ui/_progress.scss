@@ -2,9 +2,21 @@
     PROGRESS
 \*------------------------------------*/
 /**
+*
 * Styling for the "progress bar" (more like dots) that goes at the bottom of each page.
 * if the number of progress dots needed varies, only change the variable $progress-dots in the _vars.scss file
 * (OR here, uncommenting the line and changing its value)
+*
+* Use the following structure:
+
+	<ul.page__progress  progress-#>
+		<li></li><li></li><li></li><li></li><li></li><li></li>
+	</ul>
+
+* (DO NOT add spaces between li tags, for this will cause the last one to go to the next line,
+* if you wish to add linebreaks because code looks cleaner, comment the line breaks, as crazy as that may seem,
+* this is because they are displayed as inline-blocks, and browser reads line breaks as space between them)
+*
 */
 
 //$progress-dots: 6; //UNCOMMENT THIS LINE to change how many progress dots the app needs.
