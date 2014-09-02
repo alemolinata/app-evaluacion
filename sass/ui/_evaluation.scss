@@ -66,7 +66,7 @@ p + .question--priorities{
 	background-color: lighten($color__module__bg-2,2);
 	vertical-align: middle;
 	padding: 12px;
-	margin: 0 -12px 0 -12px ;
+	margin: 0 ;
 }
 
 /*
@@ -121,7 +121,60 @@ p + .question--priorities{
 	}
 }
 
+
+/*
+	<div.question--checkbox>
+        <input checkbox/>
+        <label></label>
+    </div>
+*/
+.question--checkbox{
+	margin-bottom: 12px;
+	position: relative;
+	input[type="checkbox"]{
+		@include opacity(0);
+		position: absolute;
+	}
+	label{
+		&:before{
+			@extend %icon;
+			color: $color__module__bg;
+			content: "";
+			width: 24px;
+			height: 24px;
+			@include vendor(border-radius, 12px);
+			border: 2px solid lighten($color__gray--medium, 20);
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			line-height: 20px;
+			text-align: center;
+		}
+		padding-left: 42px;
+		display: block;
+		@extend .question--button;
+		@include animation(0.2s);
+		&:hover{
+			background-color: darken($color__module__bg-2,5);
+		}
+	}
+	input[type="checkbox"]:checked + label{
+		background-color: $color__branding;
+		&:before{
+			border: 2px solid $color__module__bg;
+			content: $icon-check;
+		}
+	}
+}
+
+.question--input{
+	width: 100%;
+}
+
+/*
+.question--input + .button__wrapper,
+.question--checkbox + .button__wrapper,
 .question--priorities + .button__wrapper,
 .question--option + .button__wrapper{
 	margin-top: 20px;
-}
+}*/

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Fondeso - Login</title>
+    <title>Fondeso - Evaluacion</title>
 	<link rel="shortcut icon" href="favicon.ico"/>
     <link href='http://fonts.googleapis.com/css?family=Muli:400,300italic|Montserrat:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.min.css">
@@ -15,23 +15,29 @@
     </div>
     <div class="page">
         <div class="page__title">
-            <span class="title__text">APP FONDESO</span>
+            <span class="title__number">2C</span><span class="title__text">Input num&eacute;rico</span>
         </div>
         <div class="page__content">
-        	<h3>¡Bienvenido a la app de Fondeso!</h3>
-        	<p>Podemos recomendarte fondos blablabla. S&oacute;lo necesitamos saber un poco m&aacute;s de ti y de tu empresa.</p>
-            <p>Contesta las siguientes preguntas. Puedes cerrar la p&aacute;gina en cualquier momento y tu progreso se quedar&aacute; guardado.</p>
-            <button>INICIAR EVALUACI&Oacute;N</button>
+            <p>Pregunta que requiere input num&eacute;rico</p>
+            <p class="p--instructions">Escribe un n&uacute;mero en el input.</p>
+            
+            <input class="question--input" type="number" min="0" max="1000" /> 
+            <div class="button__wrapper">
+                <button class="button--back"></button><!--
+             --><button class="button--forward">Siguiente</button>
+            </div>
         </div>
-
+        <ul class="page__progress  progress-5">
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+        </ul>
     </div>
+    
     <div class="footer">
         <img src="images/logos-sedeco-cdmx.png" />
         <img src="images/logo-fondeso.png" />
         <img src="images/logo-usaid.png" />
         <img src="images/logo-cdmx.png" />
         <img src="images/logo-codeando.png" />
-
     </div>
 </body>
 </html>

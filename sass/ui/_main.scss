@@ -20,8 +20,22 @@
 	max-width: 400px;
 	margin: 0 auto;
 	padding-top: 20px;
+	position: relative;
+	@include animation(0.2s);
 	img{
 		width: 240px;
+		@include animation(0.2s);
+	}
+	.icon{
+		color: $color__module__bg;
+		font-size: 32px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		cursor: pointer;
+		&:hover{
+			@include opacity(0.8);
+		}
 	}
 }
 
@@ -98,3 +112,12 @@
 	}
 }
 
+.overlay{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(51,51,51, 0.6);
+	z-index: 20;
+}
