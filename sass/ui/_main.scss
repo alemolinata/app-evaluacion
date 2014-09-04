@@ -17,7 +17,7 @@
 
 // At the top of the page, with the logo
 .header{
-	max-width: 400px;
+	max-width: $max-width;
 	margin: 0 auto;
 	padding-top: 20px;
 	position: relative;
@@ -43,7 +43,7 @@
 // I called it page because it's the one that is going to change throughout the app
 // so if you need to add partials, you would import them here.
 .page{
-	max-width: 400px;
+	max-width: $max-width;
 	margin: 0 auto;
 	// What is being displayed now?
 	.page__title{

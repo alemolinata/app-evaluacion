@@ -128,7 +128,7 @@ select{
     -moz-appearance:window;
     border: none;
     background-color: $color__gray--light;
-    padding: 12px;
+    padding: 12px 32px 12px 12px;
     &:hover{
 		background-color: darken($color__module__bg-2, 6);
 	}
@@ -189,7 +189,7 @@ select{
 // BUTTONS -----------------------------------------------------------------------------
 // The most used are tha back and forward buttons, durind the evaluation.
 button,
-a.button{
+.button{
 	color: $color__font--light;
 	background-color: $color__branding;
 	border-radius: 2px;
@@ -211,6 +211,13 @@ a.button{
 		background-color: lighten($color__branding, 25);
 		cursor: default;
 	}
+}
+
+.button--full{
+	@extend .button;
+	text-align: center;
+	display: block;
+	margin-top: 12px;
 }
 
 /*
