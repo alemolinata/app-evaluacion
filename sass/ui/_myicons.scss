@@ -136,6 +136,13 @@
 .#{$icon-css-prefix}-triangle:before {
   content: $icon-triangle;
 }
+.#{$icon-css-prefix}-twitter:before {
+  content: $icon-twitter;
+}
+.#{$icon-css-prefix}-facebook:before {
+  content: $icon-facebook;
+}
+
 /*------------------------------------*\
     ICON STYLING
 \*------------------------------------*/

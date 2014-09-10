@@ -15,6 +15,21 @@
 
 */
 
+.header--logos{
+	position: absolute;
+	width: 100%;
+	img{
+		max-width: 200px;
+		@include animation(0.5s);
+		&:last-child{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+
 // At the top of the page, with the logo
 .header{
 	max-width: $max-width;
@@ -23,7 +38,7 @@
 	position: relative;
 	@include animation(0.2s);
 	img{
-		width: 240px;
+		width: 200px;
 		@include animation(0.2s);
 	}
 	.icon{
@@ -39,12 +54,14 @@
 	}
 }
 
+
 // Content
 // I called it page because it's the one that is going to change throughout the app
 // so if you need to add partials, you would import them here.
 .page{
 	max-width: $max-width;
 	margin: 0 auto;
+	min-height: 60%;
 	// What is being displayed now?
 	.page__title{
 		background-color: $color__branding;
@@ -96,19 +113,89 @@
 	}
 }
 
-// At the bottom of page, basically only to place logos.
-.footer{
-	padding-top: 20px;
-	text-align: center;
-	background-color: $color__module__bg;
-	img{
-		max-width: 300px;
-		@include animation(0.5s);
+.bar--social{
+	position: relative;
+	background-color: lighten($color__background,10);
+	color: $color__font--light;
+	padding: 10px 20px;
+	.icon{
+		font-size: 24px;
+		line-height: 24px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	span{
+		line-height: 18px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 12px;
+		margin-left: 4px;
+	}
+	a,
+	a:visited{
+		display: inline-block;
+		color: $color__font--light;
+		text-decoration: none;
+	}
+	a:last-child{
+		position: absolute;
+		right: 20px;
+		top: 10px;
 	}
 }
-@media only screen and (max-width: 620px) {
+
+
+// At the bottom of page, basically only to place logos.
+.footer{
+	position: relative;
+	padding-top: 20px;
+	text-align: left;
+	background-color: $color__module__bg;
+	img{
+		max-width: 240px;
+		@include animation(0.5s);
+		&:last-child{
+			position: absolute;
+			right: 0;
+			top: 20px;
+		}
+	}
+	.footer__links{
+		text-align: center;
+		padding-bottom: 20px;
+		a, span{
+			&:first-child{
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 910px) {
+	.header--logos{
+		position: relative;
+	}
+	.header{
+		padding-top: 0;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.header--logos{
+		img{
+			max-width: 160px;
+		}
+	}
 	.footer img{
 		max-width: 160px;
+	}
+}
+
+@media only screen and (max-width: 590px) {
+	.bar--social{
+		a:last-child{
+			position: static;
+		}
 	}
 }
 
