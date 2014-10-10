@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'fondeso-icons';
-	src:url('fonts/fondeso-icons.eot?-bo3lpn');
-	src:url('fonts/fondeso-icons.eot?#iefix-bo3lpn') format('embedded-opentype'),
-		url('fonts/fondeso-icons.woff?-bo3lpn') format('woff'),
-		url('fonts/fondeso-icons.ttf?-bo3lpn') format('truetype'),
-		url('fonts/fondeso-icons.svg?-bo3lpn#fondeso-icons') format('svg');
+	src:url('fonts/fondeso-icons.eot?6wn603');
+	src:url('fonts/fondeso-icons.eot?#iefix6wn603') format('embedded-opentype'),
+		url('fonts/fondeso-icons.woff?6wn603') format('woff'),
+		url('fonts/fondeso-icons.ttf?6wn603') format('truetype'),
+		url('fonts/fondeso-icons.svg?6wn603#fondeso-icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-triangle-up:before {
+	content: "\e618";
+}
 .icon-gear:before {
 	content: "\e613";
 }

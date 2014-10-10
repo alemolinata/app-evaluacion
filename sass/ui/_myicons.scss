@@ -85,6 +85,7 @@
 /* Icons use the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 
+.#{$icon-css-prefix}-triangle-up:before { content: $icon-triangle-up;}
 .#{$icon-css-prefix}-gear:before { content: $icon-gear;}
 .#{$icon-css-prefix}-print:before { content: $icon-print;}
 .#{$icon-css-prefix}-power:before { content: $icon-power;}
